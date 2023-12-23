@@ -1,0 +1,119 @@
+body {
+    /* Definindo uma cor de fundo inicial */
+    background-color: #323232; /* Um tom mais escuro para representar a sala */
+  
+    /* Utilizando múltiplos gradientes para criar o efeito de iluminação */
+    background-image: radial-gradient(ellipse at center, rgba(214, 214, 44, 0.5) 10%, rgba(185, 185, 27, 0) 70%), linear-gradient(to bottom, rgba(54, 12, 0, 1) 0%, rgba(107, 61, 33, 1) 100%);
+    /* Ajuste os valores das cores e transparências conforme necessário */
+  
+    /* Garantindo que o gradiente cubra toda a área visível */
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+   
+.scene {
+    position: relative;
+    width: 100%; /* Ajuste conforme necessário */
+    height: 800px; /* Ajuste conforme necessário */
+}
+
+.arvore, .janela, .lareira {
+    position: absolute;
+}
+
+.arvore {
+    width: 550px;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+}
+
+.decoration {
+    position: absolute;
+  }
+
+#estrela {
+    top: 230px;
+    left: 448px;
+    width: 70px;
+}
+#stitch {
+    top: 320px;
+    left: 485px;
+    width: 60px;
+  }
+#pascal {
+    top: 660px;
+    left: 360px;
+    width: 80px;
+  }
+#edwiges {
+    top: 420px;
+    left: 480px;
+    width: 50px;
+}
+#harry {
+    top: 640px;
+    left: 460px;
+    width: 90px;
+}
+#homem-aranha {
+    top: 360px;
+    left: 400px;
+    width: 55px;
+}
+#hulk {
+    top: 645px;
+    left: 620px;
+    width: 50px;
+}
+#homem-ferro {
+    top: 570px;
+    left: 400px;
+    width: 45px;
+}
+#marceline {
+    top: 510px;
+    left: 520px;
+    width: 60px;
+}
+#oscar {
+    top: 450px;
+    left: 380px;
+    width: 70px;
+}
+#mufasa {
+    top: 580px;
+    left: 300px;
+    width: 80px;
+}
+
+.decoration.animate {
+    animation: swingZoom 0.5s infinite alternate ease-in-out;
+}
+
+@keyframes swingZoom {
+    0% {
+        transform: rotate(-10deg) scale(2); /* Escala inicial */
+      }
+      50% {
+        transform: rotate(10deg) scale(2.2); /* Escala aumentada */
+      }
+      100% {
+        transform: rotate(-10deg) scale(2); /* Voltar à escala inicial */
+      }
+    }  
+  
+.lareira {
+    max-width: 250px;
+    top: 300px;
+    left: 28px;
+}
+
+.janela {
+    max-width: 450px;
+    top: 15%;
+    left: 55%;
+}
+  
