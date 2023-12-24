@@ -1,12 +1,11 @@
-/* Aplica a imagem na metade superior */
 body {
     background-image: 
       url('img/parede.jpg'),
       url('img/chao.png');
-  
-    background-size: 985px 609px;
+    background-size:  100% 74%;
     background-repeat: no-repeat; 
     background-position: top center, bottom center;
+    width: 100% auto;
 }
 .scene {
     position: relative;
@@ -27,59 +26,60 @@ body {
 }
 
 #estrela {
-    top: 230px;
-    left: 448px;
+    top: 30%;
+    left: 46%;
     width: 70px;
 }
 #stitch {
-    top: 320px;
-    left: 485px;
+    top: 41%;
+    left: 52%;
     width: 60px;
-  }
-#pascal {
-    top: 660px;
-    left: 360px;
-    width: 80px;
-  }
-#edwiges {
-    top: 420px;
-    left: 480px;
-    width: 50px;
-}
-#harry {
-    top: 640px;
-    left: 460px;
-    width: 90px;
 }
 #homem-aranha {
-    top: 360px;
-    left: 400px;
+    top: 45%;
+    left: 43%;
     width: 55px;
 }
-#hulk {
-    top: 645px;
-    left: 620px;
+#edwiges {
+    top: 53%;
+    left: 50%;
     width: 50px;
 }
-#homem-ferro {
-    top: 570px;
-    left: 400px;
-    width: 45px;
-}
-#marceline {
-    top: 510px;
-    left: 520px;
-    width: 60px;
-}
 #oscar {
-    top: 450px;
-    left: 380px;
+    top: 55%;
+    left: 40%;
     width: 70px;
 }
 #mufasa {
-    top: 580px;
-    left: 300px;
+    top: 72%;
+    left: 31%;
     width: 80px;
+    transform: rotate(15deg);
+}
+#marceline {
+    top: 65%;
+    left: 53%;
+    width: 60px;
+}
+#homem-ferro {
+    top: 70%;
+    left: 41%;
+    width: 45px;
+}
+#pascal {
+    top: 82%;
+    left: 37%;
+    width: 80px;
+}
+#harry {
+    top: 79%;
+    left: 48%;
+    width: 90px;
+}
+#hulk {
+    top: 80%;
+    left: 60%;
+    width: 50px;
 }
 
 .decoration.animate {
@@ -100,6 +100,19 @@ body {
     left: 28px;
 }
 
+#pai_natal {
+    position: absolute;
+    max-width: 100px;
+    top: 262px;
+    left: 103px;
+}
+
+#pai_natal.foge {
+    max-width: 160px;
+    top: 280px;
+    left: 90px;
+}
+
 .dragao {
     position: absolute;
     max-width: 170px;
@@ -108,8 +121,17 @@ body {
 } 
 
 .janela {
-    max-width: 450px;
-    top: 15%;
-    left: 55%;
+    width: 450px;
+    top: 5%;
+    left: 56%;
 }
-  
+
+#janela.aberta {
+    background-color: black;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+      background-size: cover;
+    }
+}

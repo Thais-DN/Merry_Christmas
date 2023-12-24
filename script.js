@@ -32,11 +32,45 @@ function ativarDragao() {
 
   if (dragaoOn) {
     dragao.src = 'img/dragao.png';
-    dragao.classList.remove('acende'); // Remove a classe acende
+    dragao.classList.remove('acende');
     dragaoOn = false;
   } else {
     dragao.src = 'img/dragao-acende.gif';
-    dragao.classList.add('acende'); // Adiciona a classe acende
+    dragao.classList.add('acende');
     dragaoOn = true;
+  }
+}
+
+let paiNatalOn = false;
+
+function ativarPaiNatal() {
+  const paiNatal = document.getElementById('pai_natal');
+
+  if (paiNatalOn) {
+    paiNatal.src = 'img/pai-natal-pernas.png';
+    paiNatal.classList.remove('foge');
+    paiNatalOn = false;
+  } else {
+    paiNatal.src = 'img/pai-natal.png';
+    paiNatal.classList.add('foge');
+    paiNatalOn = true;
+  }
+}
+
+let janelaOn = false;
+
+function abrirJanela() {
+  const janela = document.getElementById('janela');
+
+  if (janelaOn) {
+    console.log('Janela está fechada');
+    janela.src = 'img/janela.png';
+    janela.classList.remove('aberta');
+    janelaOn = false;
+  } else {
+    console.log('Janela está aberta');
+    janela.src = 'img/janela-aberta.png';
+    janela.classList.add('aberta');
+    janelaOn = true;
   }
 }
