@@ -23,5 +23,20 @@ function ligarLareira() {
     lareira.src = 'img/lareira-on.gif';
     lareiraOn = true;
   }
-  console.log('fui chamado')
+}
+
+let dragaoOn = false;
+
+function ativarDragao() {
+  const dragao = document.getElementById('dragao');
+
+  if (dragaoOn) {
+    dragao.src = 'img/dragao.png';
+    dragao.classList.remove('acende'); // Remove a classe acende
+    dragaoOn = false;
+  } else {
+    dragao.src = 'img/dragao-acende.gif';
+    dragao.classList.add('acende'); // Adiciona a classe acende
+    dragaoOn = true;
+  }
 }

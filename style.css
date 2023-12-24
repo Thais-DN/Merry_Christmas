@@ -1,23 +1,20 @@
+/* Aplica a imagem na metade superior */
 body {
-    /* Definindo uma cor de fundo inicial */
-    background-color: #323232; /* Um tom mais escuro para representar a sala */
+    background-image: 
+      url('img/parede.jpg'),
+      url('img/chao.png');
   
-    /* Utilizando múltiplos gradientes para criar o efeito de iluminação */
-    background-image: radial-gradient(ellipse at center, rgba(214, 214, 44, 0.5) 10%, rgba(185, 185, 27, 0) 70%), linear-gradient(to bottom, rgba(54, 12, 0, 1) 0%, rgba(107, 61, 33, 1) 100%);
-    /* Ajuste os valores das cores e transparências conforme necessário */
-  
-    /* Garantindo que o gradiente cubra toda a área visível */
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-   
+    background-size: 985px 609px;
+    background-repeat: no-repeat; 
+    background-position: top center, bottom center;
+}
 .scene {
     position: relative;
     width: 100%; /* Ajuste conforme necessário */
     height: 800px; /* Ajuste conforme necessário */
 }
 
-.arvore, .janela, .lareira {
+.arvore, .janela, .lareira, .decoration, .oscar {
     position: absolute;
 }
 
@@ -28,10 +25,6 @@ body {
     transform: translate(-50%, -50%);
     background-size: cover;
 }
-
-.decoration {
-    position: absolute;
-  }
 
 #estrela {
     top: 230px;
@@ -90,26 +83,29 @@ body {
 }
 
 .decoration.animate {
-    animation: swingZoom 0.5s infinite alternate ease-in-out;
+    animation: swingZoom 1.0s infinite alternate ease-in-out;
 }
 
 @keyframes swingZoom {
-    0% {
-        transform: rotate(-10deg) scale(2); /* Escala inicial */
-      }
-      50% {
-        transform: rotate(10deg) scale(2.2); /* Escala aumentada */
-      }
-      100% {
-        transform: rotate(-10deg) scale(2); /* Voltar à escala inicial */
-      }
-    }  
-  
+    0% {transform: scale(1);}
+    25% {transform: scale(1.2) rotate(1deg);}
+    50% {transform: scale(1.5) rotate(5deg);}
+    75% {transform: scale(1.2) rotate(1deg);}
+    100% {transform: scale(1);}
+}
+   
 .lareira {
     max-width: 250px;
     top: 300px;
     left: 28px;
 }
+
+.dragao {
+    position: absolute;
+    max-width: 170px;
+    top: 410px;
+    left: -10px;
+} 
 
 .janela {
     max-width: 450px;
