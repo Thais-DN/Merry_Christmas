@@ -60,17 +60,44 @@ function ativarPaiNatal() {
 let janelaOn = false;
 
 function abrirJanela() {
-  const janela = document.getElementById('janela');
+  const janela = document.getElementById('close-janela');
+  const janelaOpen = document.getElementById('open-janela');
 
   if (janelaOn) {
-    console.log('Janela está fechada');
-    janela.src = 'img/janela.png';
-    janela.classList.remove('aberta');
     janelaOn = false;
+    janela.hidden = false
+    janelaOpen.hidden = true
   } else {
-    console.log('Janela está aberta');
-    janela.src = 'img/janela-aberta.png';
-    janela.classList.add('aberta');
     janelaOn = true;
+    janela.hidden = true
+    janelaOpen.hidden = false
+  }
+}
+
+let piscaPiscaOn = false;
+
+function alternarImagem() {
+  const imagem = document.getElementById('arvore');
+  
+  if (piscaPiscaOn) {
+    imagem.src = 'img/arvore-natal.png'; 
+    piscaPiscaOn = false;
+  } else {
+    imagem.src = 'img/arvore-natal-pisca.gif';
+    piscaPiscaOn = true;
+  }
+}
+
+let tomadaOn = false;
+
+function ativarPiscaPisca() {
+  const tomada = document.getElementById('tomada');
+
+  if (tomadaOn) {
+    tomada.src = 'img/tomada.png';
+    tomadaOn = false;
+  } else {
+    tomada.src = 'img/tomada-ligada.png';
+    tomadaOn = true;
   }
 }

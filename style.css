@@ -5,20 +5,20 @@ body {
     background-size:  100% 74%;
     background-repeat: no-repeat; 
     background-position: top center, bottom center;
-    width: 100% auto;
-}
+    width: 100vw;
+} 
 .scene {
     position: relative;
     width: 100%; /* Ajuste conforme necessário */
     height: 800px; /* Ajuste conforme necessário */
 }
 
-.arvore, .janela, .lareira, .decoration, .oscar {
+.arvore, .janela, .lareira, .decoration, .oscar, .tomada{
     position: absolute;
 }
 
 .arvore {
-    width: 550px;
+    width: 460px;
     top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -30,6 +30,13 @@ body {
     left: 46%;
     width: 70px;
 }
+
+.tomada{
+    width: 35px;
+    left: 30.5%;
+    top: 60.5%;
+}
+
 #stitch {
     top: 41%;
     left: 52%;
@@ -88,9 +95,9 @@ body {
 
 @keyframes swingZoom {
     0% {transform: scale(1);}
-    25% {transform: scale(1.2) rotate(1deg);}
-    50% {transform: scale(1.5) rotate(5deg);}
-    75% {transform: scale(1.2) rotate(1deg);}
+    25% {transform: scale(1.2);}
+    50% {transform: scale(1.5);}
+    75% {transform: scale(1.2);}
     100% {transform: scale(1);}
 }
    

@@ -6,11 +6,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <button onclick="iniciarNeve()">Começar Neve</button>
+<div class="superficie">
+  <div class="neve"></div>
+</div>
     <div class="scene">
         <div class="arvore-container" id="arvore-container">
             <img src="img/arvore-natal.png" alt="Árvore de Natal" class="arvore"  id="arvore">
             <img src="img/estrela.png" alt="estrela" class="decoration" id="estrela">
-            <img src="img/stitch.png" alt="stitch" class="decoration" id="stitch">
+            <!-- <img src="img/stitch.png" alt="stitch" class="decoration" id="stitch">
             <img src="img/pascal.png" alt="pascal" class="decoration" id="pascal">
             <img src="img/edwiges.png" alt="edwiges" class="decoration" id="edwiges">
             <img src="img/harry.png" alt="harry" class="decoration" id="harry">
@@ -19,8 +23,11 @@
             <img src="img/homem-ferro.png" alt="homem-ferro" class="decoration" id="homem-ferro">
             <img src="img/marceline.png" alt="marceline" class="decoration" id="marceline">
             <img src="img/mufasa.png" alt="mufasa" class="decoration" id="mufasa">
-            <img src="img/oscar.png" alt="oscar" class="oscar" id="oscar">
+            <img src="img/oscar.png" alt="oscar" class="oscar" id="oscar"> -->
         </div>
+    </div>
+    <div class="tomada-container">
+        <img src="img/tomada.png" alt="tomada" onclick="alternarImagem(), ativarPiscaPisca()" class="tomada" id="tomada">
     </div>
     <div class="lareira-container" id="lareira-container">
         <img src="img/lareira.png" alt="Lareira" class="lareira" id="lareira">
@@ -28,7 +35,8 @@
         <img src="img/dragao.png" onclick="ligarLareira(), ativarDragao(), ativarPaiNatal()" alt="dragao" class="dragao" id="dragao"></img>
     </div>
     <div class="janela-container" id="janela">
-        <img src="img/janela.png" onclick="abrirJanela()" class="janela" id="janela" alt="Janela">
+        <img src="img/janela-aberta.gif" onclick="abrirJanela()" class="janela" id="open-janela" alt="Janela" hidden>
+        <img src="img/janela.png" onclick="abrirJanela(), iniciarNeve()" class="janela" id="close-janela" alt="Janela" >
     </div>
 </div>
 
